@@ -44,3 +44,29 @@ elif 12 < idade < 18:
     print("Adolescente")
 elif idade >= 18:
     print("Adulto")
+
+usuário_correto = "kaleu"
+senha_certa = "kaleu"
+
+usuário = input("Digite o nome do usuário:")
+senha = input("digite a senha do usuário:")
+
+if usuário == usuário_correto and senha == senha_certa:
+    print("Acesso liberado.")
+else:
+    print("Credenciais inválidas")
+
+
+cordenadas_x = int(input("Qual a cordenada X?"))
+cordenadas_y = int(input("Qual a cordenada ?"))
+
+if cordenadas_x > 0 and cordenadas_y > 0:
+    print("Primeiro quadrante")
+elif cordenadas_x < 0 and cordenadas_y > 0:
+    print("Segundo quadrante")
+elif cordenadas_x < 0 and cordenadas_y < 0:
+    print("Terceiro quadrante")
+elif cordenadas_x > 0 and cordenadas_y < 0:
+    print("Quarto quadrante")
+else:
+    print("o ponto está localizado no eixo ou origem")
