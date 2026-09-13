@@ -10,3 +10,37 @@ print("A", "L", "U", "R", "A", sep="\n")
 pi = 3.14159
 
 print("O valor arredondado de pi é", pi)
+
+print("EXERCÍCIO 2\n")
+
+
+número = int(input("Escolha um número"))
+if número == 2:
+    print("Este número é par")
+elif número == 4:
+    print("Este número é par")
+elif número == 6:
+    print("Este número é par")
+elif número == 8:
+    print("Este número é par")
+elif número == 1:
+    print("Este número é ímpar")
+elif número == 3:
+    print("Este número é ímpar")
+elif número == 5:
+    print("Este número é ímpar")
+elif número == 7:
+    print("Este número é ímpar")
+elif número == 9:
+    print("Este número é ímpar")
+else:
+    print("Resposta inválida")
+
+
+idade = int(input("Qual a sua idade?"))
+if 0 < idade <= 12:
+    print("criança")
+elif 12 < idade < 18:
+    print("Adolescente")
+elif idade >= 18:
+    print("Adulto")
