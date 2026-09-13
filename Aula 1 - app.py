@@ -1,3 +1,5 @@
+import os
+
 print ("""
 ╭━━━┳━━━┳━━╮╭━━━┳━━━╮╭━━━┳━╮╭━┳━━━┳━━━┳━━━┳━━━┳━━━╮
 ┃╭━╮┃╭━╮┃╭╮┃┃╭━╮┃╭━╮┃┃╭━━┻╮╰╯╭┫╭━╮┃╭━╮┃╭━━┫╭━╮┃╭━╮┃
@@ -11,5 +13,21 @@ print("2. Listar restaurante")
 print("3. Ativar restaurante")
 print("4. Sair\n")
 
-opção_escolhida = input("Escolha uma opção: ")
-print(f"Você escolheu a opção: {opção_escolhida}")
+opção_escolhida = int(input("Escolha uma opção: "))
+
+def finalizar_app():
+    os.system("cls")
+    print("Finalizando o app\n")
+
+
+
+
+
+if opção_escolhida == 1:
+    print("cadastrar restaurante")
+elif opção_escolhida == 2:
+    print("listar restaurantes")
+elif opção_escolhida == 3:
+  print("ativar restaurante")
+else:
+    finalizar_app()
