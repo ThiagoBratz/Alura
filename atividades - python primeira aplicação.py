@@ -134,12 +134,36 @@ lista_números = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(soma)
 
 
-lista_números_2 = [7, 6, 10, 9, 6]
+# lista_números_2 = [7, 6, 10, 9, 6]
 
+# valor_lista = len(lista_números_2)
+# if valor_lista > 0:
+#     média_lista = sum(lista_números_2) / len(lista_números_2)
+#     print(média_lista)
+# elif valor_lista <= 0:
+#     pass
 
-valor_lista = len(lista_números_2)
-if valor_lista > 0:
-    média_lista = sum(lista_números_2) / len(lista_números_2)
-    print(média_lista)
-elif valor_lista <= 0:
-    pass
+#DICIONÁRIOS
+
+dic_produtos = {"ipad": 7000, "iphone" : 5000, "airpod" : 2000}
+
+# print(dic_produtos["iphone"])
+
+# dic_produtos["iphone"] = 20
+# print(dic_produtos)
+
+# dic_produtos["laranja"] = 90
+# print(dic_produtos)
+
+# item_removido =dic_produtos.pop("ipad")
+# print(dic_produtos)
+# print(item_removido)
+
+produto_buscado = input("Digite o nome do produto: ").strip().lower()
+if produto_buscado in dic_produtos:
+    preço = dic_produtos[produto_buscado]
+    print("Produto encontrado")
+    print(f"Produto: {produto_buscado}, Preço: R${preço}")
+else:
+    print("Produto não encontrado")
+
