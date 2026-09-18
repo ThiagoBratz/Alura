@@ -145,7 +145,7 @@ lista_números = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 #DICIONÁRIOS
 
-dic_produtos = {"ipad": 7000, "iphone" : 5000, "airpod" : 2000}
+#dic_produtos = {"ipad": 7000, "iphone" : 5000, "airpod" : 2000}
 
 # print(dic_produtos["iphone"])
 
@@ -159,11 +159,128 @@ dic_produtos = {"ipad": 7000, "iphone" : 5000, "airpod" : 2000}
 # print(dic_produtos)
 # print(item_removido)
 
-produto_buscado = input("Digite o nome do produto: ").strip().lower()
-if produto_buscado in dic_produtos:
-    preço = dic_produtos[produto_buscado]
-    print("Produto encontrado")
-    print(f"Produto: {produto_buscado}, Preço: R${preço}")
-else:
-    print("Produto não encontrado")
+# produto_buscado = input("Digite o nome do produto: ").strip().lower()
+# if produto_buscado in dic_produtos:
+#     preço = dic_produtos[produto_buscado]
+#     print("Produto encontrado")
+#     print(f"Produto: {produto_buscado}, Preço: R${preço}")
+# else:
+#     print("Produto não encontrado")
 
+# dic_cliente = {"Nome" : "Thiago", "Idade" : 17, "Cidade" : "Porto Alegre"}
+
+# print(dic_cliente["Nome"])
+
+# produto = {"nome" : "Mouse", "preço" : 150, "estoque" : 10}
+
+# print(produto["preço"])
+
+# aluno = {
+#     "nome": "João",
+#     "nota": 7
+# }
+
+# aluno["nota"] = 9
+# print(aluno["nota"])
+
+# cliente = {
+#     "nome": "Maria",
+#     "idade": 25
+# }
+
+# cliente["Cidade"] = "Porto Alegre"
+# print(cliente)
+
+# produto = {
+#     "nome": "Teclado",
+#     "preço": 200,
+#     "estoque": 5
+# }
+# if produto["estoque"] > 0:
+#     print("Produto disponível")
+# else:
+#     print("Produto indisponível")
+
+# contrato = {
+#     "Cliente" : "Thiago",
+#     "valor_imóvel" : 200000,
+#     "financiamento" : 180000,
+#     "parcelas_construtora" : 20000
+
+# }
+
+# for chave, valor in contrato.items():
+#     print(chave, valor)
+
+# contrato = {
+#     "cliente": "Thiago",
+#     "financiamento": 180000,
+#     "parcelas_construtora": 20000,
+#     "intermediarias": 5000
+# }
+
+# for chave, valor in contrato.items():
+#     if isinstance(valor, str):
+#         print("não é um valor")
+#     elif valor >= 10000:
+#         print("Valor alto")
+#     else:
+#         print("valor baixo")
+
+
+
+# for chave, valor in contrato.items():
+#     if isinstance(valor, str):
+#         print(chave, valor, "não é um valor")
+#     elif valor >= 10000:
+#         print(chave, valor," é um valor alto")
+#     else:
+#         print(chave, valor," é um valor baixo")
+
+
+#print(f"Produto: {produto_buscado}, Preço: R${preço}")#
+
+# contrato = {
+#     "cliente": {
+#         "nome": "Thiago",
+#         "idade": 17
+#     },
+#     "financiamento": 180000,
+#     "parcelas": 120
+# }
+
+# #print((contrato["cliente"]["nome"]))
+
+
+
+# print.(contrato["cliente"]["nome"])
+# print(contrato["cliente"]["idade"])
+# print(contrato["financiamento"])
+# print(contrato["parcelas"])
+
+# contrato = {
+#     "cliente": "Thiago",
+#     "financiamento": 180000,
+#     "parcelas": [500, 500, 500, 500, 500]
+# }
+
+# print("Cliente: ", (contrato["cliente"]))
+# for parcelas in contrato["parcelas"]:
+#     print("Parcela:", parcelas)
+
+contrato = {
+    "cliente": {
+        "nome": "Thiago",
+        "idade": 17
+    },
+    "financiamento": 180000,
+    "parcelas": [500, 400, 700, 300, 900]
+}
+
+print("Cliente: ", contrato["cliente"]["nome"])
+print("Financiamento: ", contrato["financiamento"])
+for parcela in contrato["parcelas"]:
+    if parcela >= 500:
+        print("Parcela:", parcela, "Parcela alta")
+    else:
+        print("Parcela:", parcela, "Parcela normal")
