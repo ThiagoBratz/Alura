@@ -268,19 +268,39 @@ lista_números = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # for parcelas in contrato["parcelas"]:
 #     print("Parcela:", parcelas)
 
-contrato = {
-    "cliente": {
-        "nome": "Thiago",
-        "idade": 17
-    },
-    "financiamento": 180000,
-    "parcelas": [500, 400, 700, 300, 900]
+# contrato = {
+#     "cliente": {
+#         "nome": "Thiago",
+#         "idade": 17
+#     },
+#     "financiamento": 180000,
+#     "parcelas": [500, 400, 700, 300, 900]
+# }
+
+# print("Cliente: ", contrato["cliente"]["nome"])
+# print("Financiamento: ", contrato["financiamento"])
+# for parcela in contrato["parcelas"]:
+#     if parcela >= 500:
+#         print("Parcela:", parcela, "Parcela alta")
+#     else:
+#         print("Parcela:", parcela, "Parcela normal")
+
+thiago_dic = {
+    "nome" : "thiago",
+    "idade" : 17,
+    "escola" : "inácio m."
+
+}
+if "nome" in thiago_dic:
+    print("O nome é", thiago_dic["nome"])
+else:
+    print("Não há essa informação")
+
+frase = "Eu gosto de doce e também gosto de doces frios".split()
+dic_palavreado = {
+
 }
 
-print("Cliente: ", contrato["cliente"]["nome"])
-print("Financiamento: ", contrato["financiamento"])
-for parcela in contrato["parcelas"]:
-    if parcela >= 500:
-        print("Parcela:", parcela, "Parcela alta")
-    else:
-        print("Parcela:", parcela, "Parcela normal")
+for palavra in frase:
+    if palavra in dic_palavreado:
+        dic_palavreado[palavra]
