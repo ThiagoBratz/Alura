@@ -1,45 +1,7 @@
-class musica:
-    nome = ""
-    artista = ""
-    duração = int
 
-musica1 = musica()
-musica1.nome = "capitãod de praia"
-musica1.artista = matue
-musica1,duração = 140
-
-musica2 = musica()
-musica2.nome = 'me lambe'
-musica2.artista = 'raimundos'
-musica2.duração = 183
-
-musica3 = Musica()
-musica3.nome = 'Shape of You'
-musica3.artista = 'Ed Sheeran'
-musica3.duracao = 234
-
-restaurante_praca.categoria = "italiana"
-
-nome_do_restaurante = restaurante_praca.nome
-
-if restaurante_praca.ativo:
-    print("o restaurante esta ativo.")
-else:
-    print("o restaurante esta inativo.")
-
-categoria = restaurante_praca.categoria
-
-restaurante_praca.nome = "Bistrô"
-
-restaurante_pizza = Restaurante ()
-restaurante_pizaz.nome = "pizza place
-restaurante_pizza.categoria ="fast food"
-
-print (restaurante_pizza.categoria)
-
-restaurante_pizza.ativo = True
-
-print(f"restaurante: {restaurante_praca.nome}, catehoria: {restaurante_praca.categoria}")
+# ==========================================
+# 1. CLASSE MUSICA
+# ==========================================
 
 class Musica:
     def __init__(self, nome="", artista="", duracao=0):
@@ -47,63 +9,53 @@ class Musica:
         self.artista = artista
         self.duracao = duracao
 
-musica1 = Musica(nome='Under Pressure', artista='Queen & David Bowie', duracao=248)
-musica2 = Musica(nome='The Trooper', artista='Iron Maiden', duracao=245)
-musica3 = Musica(nome='Hotel California', artista='Eagles', duracao=390)
+
+musica1 = Musica(
+    nome="Capitão de Praia",
+    artista="Matuê",
+    duracao=140
+)
+
+musica2 = Musica(
+    nome="Me Lambe",
+    artista="Raimundos",
+    duracao=183
+)
+
+musica3 = Musica(
+    nome="Shape of You",
+    artista="Ed Sheeran",
+    duracao=234
+)
 
 
-# 1) Implemente uma classe chamada Carro com os atributos básicos, como modelo, cor e ano.
-#    Crie uma instância dessa classe e atribua valores aos seus atributos.
-
+# ==========================================
+# 2. CLASSE CARRO
+# ==========================================
 
 class Carro:
-    def __init__(self, marca = "", modelo = "", ano = "", cor = ""):
+    def __init__(self, marca="", modelo="", ano=0, cor=""):
+        self.marca = marca
         self.modelo = modelo
         self.ano = ano
         self.cor = cor
 
-carro1 = Carro(modelo=Fusca', cor='Azul', ano=1970)
 
-class Restaurante:
-    def __init__(self, nome, categoria, capacidade, nota_avaliacao, ativo=False):
-        self.nome = nome
-        self.categoria = categoria
-        self.capacidade = capacidade
-        self.nota_avaliacao = nota_avaliacao
-        self.ativo = ativo
-
-# Instanciando um restaurante e atribuindo valores aos seus atributos
-restaurante_exemplo = Restaurante(
-    nome='Comida Boa',
-    categoria='Gourmet',
-    capacidade=50,
-    nota_avaliacao=4.5,
-    ativo=True
+carro1 = Carro(
+    marca="Volkswagen",
+    modelo="Fusca",
+    ano=1970,
+    cor="Azul"
 )
 
 
-
-# 3) Modifique a classe Restaurante adicionando um construtor que aceita nome e categoria como parâmetros
-#    e inicia ativo como False por padrão. Crie uma instância utilizando o construtor.
-
-class Restaurante:
-    def __init__(self, nome, categoria, capacidade=0, nota_avaliacao=0.0, ativo=False):
-        self.nome = nome
-        self.categoria = categoria
-        self.capacidade = capacidade
-        self.nota_avaliacao = nota_avaliacao
-        self.ativo = ativo
-
-# Instanciando um restaurante utilizando o construtor
-novo_restaurante = Restaurante(nome='Santa Marmita', categoria='Fast Food')
-
-
-
-# 4) Adicione um método especial __str__ à classe Restaurante para que, ao imprimir uma instância,
-#    seja exibida uma mensagem formatada com o nome e a categoria. Exiba essa mensagem para uma instância de restaurante.
+# ==========================================
+# 3. CLASSE RESTAURANTE
+# ==========================================
 
 class Restaurante:
-    def __init__(self, nome, categoria, capacidade=0, nota_avaliacao=0.0, ativo=False):
+    def __init__(self, nome, categoria, capacidade=0,
+                 nota_avaliacao=0.0, ativo=False):
         self.nome = nome
         self.categoria = categoria
         self.capacidade = capacidade
@@ -111,16 +63,63 @@ class Restaurante:
         self.ativo = ativo
 
     def __str__(self):
-        return f'{self.nome} | {self.categoria}'
+        return f"{self.nome} | {self.categoria}"
 
-# Exibindo uma instância do restaurante formatada
-restaurante_formatado = Restaurante(nome='Bom Sabor', categoria='Tradicional')
+
+restaurante_exemplo = Restaurante(
+    nome="Comida Boa",
+    categoria="Gourmet",
+    capacidade=50,
+    nota_avaliacao=4.5,
+    ativo=True
+)
+
+novo_restaurante = Restaurante(
+    nome="Santa Marmita",
+    categoria="Fast Food"
+)
+
+restaurante_formatado = Restaurante(
+    nome="Bom Sabor",
+    categoria="Tradicional"
+)
+
+restaurante_praca = Restaurante(
+    nome="Praça",
+    categoria="Brasileira"
+)
+
+restaurante_praca.categoria = "Italiana"
+nome_do_restaurante = restaurante_praca.nome
+
+if restaurante_praca.ativo:
+    print("O restaurante está ativo.")
+else:
+    print("O restaurante está inativo.")
+
+categoria = restaurante_praca.categoria
+restaurante_praca.nome = "Bistrô"
+
+restaurante_pizza = Restaurante(
+    nome="Pizza Place",
+    categoria="Fast Food"
+)
+
+restaurante_pizza.ativo = True
+
+print(restaurante_pizza.categoria)
+
+print(
+    f"Restaurante: {restaurante_praca.nome}, "
+    f"categoria: {restaurante_praca.categoria}"
+)
+
 print(restaurante_formatado)
 
 
-
-# 5) Crie uma classe chamada Cliente e pense em 4 atributos.
-#    Em seguida, instancie 3 objetos desta classe e atribua valores aos seus atributos através de um método construtor.
+# ==========================================
+# 4. CLASSE CLIENTE
+# ==========================================
 
 class Cliente:
     def __init__(self, nome, idade, email, telefone):
@@ -129,14 +128,36 @@ class Cliente:
         self.email = email
         self.telefone = telefone
 
-# Instanciando três objetos da classe Cliente e atribuindo valores aos seus atributos através do construtor
-cliente1 = Cliente(nome='Alice', idade=25, email='alice@gmail.com', telefone='123-456-7890')
-cliente2 = Cliente(nome='Bob', idade=30, email='bob@gmail.com', telefone='987-654-3210')
-cliente3 = Cliente(nome='Charlie', idade=22, email='charlie@gmail.com', telefone='555-123-4567')
 
-class pessoa:
-    def __init__(self, nome = "", idade ="", profissao = ""):
-        self,nome = nome
+cliente1 = Cliente(
+    nome="Alice",
+    idade=25,
+    email="alice@gmail.com",
+    telefone="123-456-7890"
+)
+
+cliente2 = Cliente(
+    nome="Bob",
+    idade=30,
+    email="bob@gmail.com",
+    telefone="987-654-3210"
+)
+
+cliente3 = Cliente(
+    nome="Charlie",
+    idade=22,
+    email="charlie@gmail.com",
+    telefone="555-123-4567"
+)
+
+
+# ==========================================
+# 5. CLASSE PESSOA
+# ==========================================
+
+class Pessoa:
+    def __init__(self, nome="", idade=0, profissao=""):
+        self.nome = nome
         self.idade = idade
         self.profissao = profissao
 
@@ -144,39 +165,124 @@ class pessoa:
         return f"{self.nome}, {self.idade}, {self.profissao}"
 
     def aniversario(self):
-        self.idade +=1
+        self.idade += 1
 
     @property
     def saudacao(self):
-        if self profissao:
-            return "ola, trabalho como {self.profissao}"
+        if self.profissao:
+            return f"Olá, trabalho como {self.profissao}."
         else:
-            return f"ola, me chamo {self.nome}"
+            return f"Olá, me chamo {self.nome}."
 
-pessoa1 = Pessoa(nome='Alice', idade=25, profissao='Engenheira')
-pessoa2 = Pessoa(nome='Luiza', idade=30, profissao='Desenvolvedor')
-pessoa3 = Pessoa(nome='Jaque', idade=22)
 
-print("Informações Iniciais:")
+pessoa1 = Pessoa(
+    nome="Alice",
+    idade=25,
+    profissao="Engenheira"
+)
+
+pessoa2 = Pessoa(
+    nome="Luiza",
+    idade=30,
+    profissao="Desenvolvedora"
+)
+
+pessoa3 = Pessoa(
+    nome="Jaque",
+    idade=22
+)
+
+print("\nInformações Iniciais:")
 print(pessoa1)
 print(pessoa2)
 print(pessoa3)
-print()
 
 pessoa1.aniversario()
 pessoa3.aniversario()
 
-print("Informações após aniversário:")
+print("\nInformações após aniversário:")
 print(pessoa1)
 print(pessoa3)
-print()
 
+print()
 print(pessoa1.saudacao)
 print(pessoa2.saudacao)
 print(pessoa3.saudacao)
 
-class conta_bancaria:
+
+# ==========================================
+# 6. CLASSE CONTA BANCARIA
+# ==========================================
+
+class ContaBancaria:
     def __init__(self, titular, saldo):
-        self.titular = titular
-        self.saldo = saldo
+        self._titular = titular
+        self._saldo = saldo
         self._ativo = False
+
+    @property
+    def titular(self):
+        return self._titular
+
+    @property
+    def saldo(self):
+        return self._saldo
+
+    @property
+    def ativo(self):
+        return self._ativo
+
+    def ativar_conta(self):
+        self._ativo = True
+
+
+conta1 = ContaBancaria("Thiago", 2000)
+conta2 = ContaBancaria("Lara", 2500)
+
+print(conta1.titular)
+print(conta2.titular)
+
+conta3 = ContaBancaria("Carlos", 200)
+
+print(f"Antes de ativar: Conta ativa? {conta3.ativo}")
+
+conta3.ativar_conta()
+
+print(f"Depois de ativar: Conta ativa? {conta3.ativo}")
+
+conta4 = ContaBancaria("Fernanda", 1500)
+
+print(f"Titular da conta 4: {conta4.titular}")
+
+
+# ==========================================
+# 7. CLASSE CLIENTE BANCO
+# ==========================================
+
+class ClienteBanco:
+    def __init__(self, nome, idade, endereco, cpf, profissao):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+        self.cpf = cpf
+        self.profissao = profissao
+
+
+    @classmethod
+    def criar_conta(cls, titular, saldo_inicial):
+        conta = ContaBancaria(titular, saldo_inicial)
+        return conta
+
+
+cliente_banco1 = ClienteBanco(
+    nome="Thiago",
+    idade=18,
+    endereco="Porto Alegre",
+    cpf="000.000.000-00",
+    profissao="Estudante"
+)
+
+conta_cliente = ClienteBanco.criar_conta("Thiago", 1500)
+
+print(f"\nConta criada para: {conta_cliente.titular}")
+print(f"Saldo inicial: R$ {conta_cliente.saldo:.2f}")
