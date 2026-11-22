@@ -1,8 +1,4 @@
 
-# ==========================================
-# 1. CLASSE MUSICA
-# ==========================================
-
 class Musica:
     def __init__(self, nome="", artista="", duracao=0):
         self.nome = nome
@@ -28,11 +24,6 @@ musica3 = Musica(
     duracao=234
 )
 
-
-# ==========================================
-# 2. CLASSE CARRO
-# ==========================================
-
 class Carro:
     def __init__(self, marca="", modelo="", ano=0, cor=""):
         self.marca = marca
@@ -47,11 +38,6 @@ carro1 = Carro(
     ano=1970,
     cor="Azul"
 )
-
-
-# ==========================================
-# 3. CLASSE RESTAURANTE
-# ==========================================
 
 class Restaurante:
     def __init__(self, nome, categoria, capacidade=0,
@@ -117,10 +103,6 @@ print(
 print(restaurante_formatado)
 
 
-# ==========================================
-# 4. CLASSE CLIENTE
-# ==========================================
-
 class Cliente:
     def __init__(self, nome, idade, email, telefone):
         self.nome = nome
@@ -149,11 +131,6 @@ cliente3 = Cliente(
     email="charlie@gmail.com",
     telefone="555-123-4567"
 )
-
-
-# ==========================================
-# 5. CLASSE PESSOA
-# ==========================================
 
 class Pessoa:
     def __init__(self, nome="", idade=0, profissao=""):
@@ -210,10 +187,6 @@ print(pessoa2.saudacao)
 print(pessoa3.saudacao)
 
 
-# ==========================================
-# 6. CLASSE CONTA BANCARIA
-# ==========================================
-
 class ContaBancaria:
     def __init__(self, titular, saldo):
         self._titular = titular
@@ -255,10 +228,6 @@ conta4 = ContaBancaria("Fernanda", 1500)
 print(f"Titular da conta 4: {conta4.titular}")
 
 
-# ==========================================
-# 7. CLASSE CLIENTE BANCO
-# ==========================================
-
 class ClienteBanco:
     def __init__(self, nome, idade, endereco, cpf, profissao):
         self.nome = nome
@@ -286,3 +255,39 @@ conta_cliente = ClienteBanco.criar_conta("Thiago", 1500)
 
 print(f"\nConta criada para: {conta_cliente.titular}")
 print(f"Saldo inicial: R$ {conta_cliente.saldo:.2f}")
+
+
+class Livro:
+    def __init__(self, titulo, autor, ano_pub):
+        self.titulo = titulo
+        self.autor = autor
+        self.ano_pub = ano_pub
+        self.disponivel - True
+
+    def __str__(self):
+                return f"Livro: {self.titulo} | Autor: {self.autor} | Ano de Publicação: {self.ano_publicacao}"
+
+    def emprestar(self):
+        self.disponivel = False
+
+livro1 = Livro("Aprendendo Python", "John Doe", 2022)
+livro2 = Livro("Data Science Fundamentals", "Jane Smith", 2020)
+
+print(livro1)
+print(livro2)
+
+livro3 = Livro("Python Cookbook", "Samuel Developer", 2019)
+print(f"Antes de emprestar: Livro disponível? {livro3.disponivel}")
+livro3.emprestar()
+print(f"Depois de emprestar: Livro disponível? {livro3.disponivel}")
+
+@staticmethod
+def verificar_disponibilidade(ano):
+        livros_disponiveis = [livro for livro in Livro.livros if livro.ano_publicacao == ano and livro.disponivel]
+        return livros_disponiveis
+
+Livro.livros = [livro1, livro2, livro3]
+
+ano_especifico = 2026
+livros_disponiveis_ano = Livro.verificar_disponibilidade(ano_especifico)
+print(f"Livros disponíveis em {ano_especifico}: {livros_disponiveis_ano}")
