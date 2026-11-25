@@ -1,4 +1,5 @@
 from avaliacao import Avaliacao
+#from cardapio.cardapio import ItemCardapio
 
 class Restaurante:
     restaurantes = []
@@ -8,6 +9,8 @@ class Restaurante:
         self._categoria = categoria.upper()
         self._ativo = False
         self._avaliacao = []
+        Restaurante.restaurantes.append(self)
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -40,3 +43,18 @@ class Restaurante:
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
+
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append
+
+    @property
+    def exibir_cardapio(self):
+        print (f"cardapio do restaurante {self._nome}"\n)
+        for i, item in enumerate(self._cardapio, start=1):
+            if hasattr(item, "descricao"):           
+            mensagem_prato = f"{i}. nome: {item._nome} | preco: {item._preco} |  descricao: {item.descricao}"
+            print (mensagem_prato)
+        else:
+            mensagem_bebida =f"{i}. nome: {item._nome} | preco: {item._preco} |  tamanho: {item.tamanho}"
+                        print (mensagem_bebida)
